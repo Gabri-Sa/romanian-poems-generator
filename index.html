@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <link rel="stylesheet" href="src/style.css">
   <title>AI Romanian Poems Generator</title>
 </head>
@@ -18,17 +19,15 @@
     </header>
 
     <main>
-      <form>
+      <form id="poem-generator-form">
         <input type="text" placeholder="Enter the topic of the Romanian poem" autofocus required autocomplete="off"
           class="instructions" />
         <input type="submit" class="submit-button" />
       </form>
 
-      <div class="poem">
+      <div class="poem" id="poem">
 
-        A fost odatã ca-n povesti,
-        <br />
-        A fost ca niciodatã,
+
 
 
       </div>
