@@ -60,6 +60,19 @@ form {
   border-left: 3px solid #885df1;
   box-shadow: 0px 20px 60px rgba(39, 33, 66, 0.03);
 }
+.hidden {
+  display: none;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.generating {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
 
 footer {
   text-align: center;

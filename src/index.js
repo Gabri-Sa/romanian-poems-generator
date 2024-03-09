@@ -17,9 +17,12 @@ function generatePoem(event) {
     "You are a romantic poetry expert and love to write short poems.Your mission is to generate a 4 lines poem, and to make sure to input it in basic HTML format and separate each line with a <br />. Please mention the poem's author at the end of the poem, and then, after the author, two <br /> down, sign the poem with 'SheCodes AI' inside element in Italic.";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  axios.get(apiURL).then(displayPoem);
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<div class="generating">
+  ⏳ ... Generating a Romanian poem about <em>${instructionsInput.value}</em></div>`;
 
-  poemElement.innerHTML = "A fost odata ca-n povesti";
+  axios.get(apiURL).then(displayPoem);
 }
 
 let poemFormElement = document.querySelector("#poem-generator-form");
